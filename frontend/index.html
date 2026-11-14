@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" content="#080d1b">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>KODZIVA</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span class="logo-icon">K</span>
+                <div>
+                    <h2>KODZIVA</h2>
+                    <small>AI CODING PARTNER</small>
+                </div>
+            </div>
+
+            <button class="nav-btn active" data-page="home">
+                ⌂ Dashboard
+            </button>
+
+            <button class="nav-btn" data-page="generate">
+                ⚡ Generate Code
+            </button>
+
+            <button class="nav-btn" data-page="debug">
+                ⌘ Smart Debugger
+            </button>
+
+            <button class="nav-btn" data-page="dissect">
+                ◈ Code Dissector
+            </button>
+
+            <button class="nav-btn" data-page="trace">
+                ⇢ Execution Trace
+            </button>
+
+            <button class="nav-btn" data-page="viva">
+                ✎ AI Viva Trainer
+            </button>
+
+            <button class="nav-btn" data-page="history">
+                📚 Code History
+            </button>
+
+            <div class="sidebar-bottom">
+                <p>LEARN • BUILD • GROW</p>
+                <small>Your coding journey starts here.</small>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">YOUR PERSONAL CODING PARTNER</p>
+                    <h2 id="page-title">Welcome to KODZIVA</h2>
+                </div>
+
+                <div class="profile">S</div>
+            </header>
+
+
+            <!-- HOME / DASHBOARD PAGE -->
+            <section id="home-page" class="page active-page">
+
+                <!-- HERO -->
+                <div class="hero">
+                    <div>
+                        <span class="tag">AI POWERED LEARNING</span>
+
+                        <h1>
+                            Don't just write code.<br>
+                            <span>Understand it.</span>
+                        </h1>
+
+                        <p>
+                            Generate, debug, understand and master programming
+                            with your personal AI coding partner.
+                        </p>
+
+                        <button
+                            class="primary-btn"
+                            onclick="openPage('generate')"
+                        >
+                            Start Coding →
+                        </button>
+                    </div>
+
+                    <div class="hero-symbol" aria-hidden="true">
+                        &lt;/&gt;
+                    </div>
+                </div>
+
+
+                <!-- DASHBOARD STATISTICS -->
+                <div class="dashboard-stats">
+
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <h3 id="total-tasks">0</h3>
+                        <p>Total AI Tasks</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">💻</div>
+                        <h3 id="total-languages">0</h3>
+                        <p>Languages Explored</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <h3 id="total-features">0</h3>
+                        <p>Features Used</p>
+                    </div>
+
+                </div>
+
+
+                <!-- RECENT CODING ACTIVITY -->
+                <div class="dashboard-activity">
+                    <h2>Your Coding Activity</h2>
+                    <div id="activity-list"></div>
+                </div>
+
+
+                <!-- LEARNING PROGRESS TRACKER -->
+                <div class="progress-tracker">
+
+                    <h2>🏆 Your Learning Progress</h2>
+
+                    <div class="weekly-progress">
+                        <h3>📅 Weekly Coding Activity</h3>
+                        <div id="weekly-chart"></div>
+                    </div>
+
+                    <div class="learning-insights">
+
+                        <div class="insight-card">
+                            <h3>💻 Most Used Language</h3>
+                            <p id="top-language">Not available yet</p>
+                        </div>
+
+                        <div class="insight-card">
+                            <h3>🔥 Learning Streak</h3>
+                            <p id="learning-streak">0 days</p>
+                        </div>
+
+                    </div>
+
+                    <div class="achievement-section">
+                        <h3>🎖️ Your Achievements</h3>
+                        <div id="achievement-list"></div>
+                    </div>
+
+                </div>
+
+
+                <!-- WORKSPACE HEADING -->
+                <div class="section-heading">
+                    <h2>Your Learning Workspace</h2>
+                    <p>
+                        Everything you need to become a confident programmer.
+                    </p>
+                </div>
+
+
+                <!-- FEATURE CARDS -->
+                <div class="feature-grid">
+
+                    <div class="feature-card" onclick="openPage('generate')">
+                        <div class="feature-icon blue">⚡</div>
+                        <h3>Prompt to Code</h3>
+                        <p>Turn programming questions into working code.</p>
+                        <span>Explore →</span>
+                    </div>
+
+                    <div class="feature-card" onclick="openPage('debug')">
+                        <div class="feature-icon red">⌘</div>
+                        <h3>Smart Debugger</h3>
+                        <p>Find errors and understand how to fix them.</p>
+                        <span>Explore →</span>
+                    </div>
+
+                    <div class="feature-card" onclick="openPage('dissect')">
+                        <div class="feature-icon purple">◈</div>
+                        <h3>Code Dissector</h3>
+                        <p>Understand every line, symbol and keyword.</p>
+                        <span>Explore →</span>
+                    </div>
+
+                    <div class="feature-card" onclick="openPage('trace')">
+                        <div class="feature-icon green">⇢</div>
+                        <h3>Execution Trace</h3>
+                        <p>See how your program executes step by step.</p>
+                        <span>Explore →</span>
+                    </div>
+
+                    <div class="feature-card" onclick="openPage('viva')">
+                        <div class="feature-icon orange">✎</div>
+                        <h3>AI Viva Trainer</h3>
+                        <p>Practice questions based on your own code.</p>
+                        <span>Explore →</span>
+                    </div>
+
+                    <div class="feature-card" onclick="openPage('generate')">
+                        <div class="feature-icon cyan">🎓</div>
+                        <h3>Year-wise Learning</h3>
+                        <p>Learn according to your engineering level.</p>
+                        <span>Explore →</span>
+                    </div>
+
+                </div>
+
+
+                <!-- BOTTOM BANNER -->
+                <div class="bottom-banner">
+                    <h3>Ready to improve your coding skills?</h3>
+                    <p>Start with a simple C programming problem today.</p>
+                </div>
+
+            </section>
+
+
+
+            <!-- WORKSPACE PAGE -->
+            <section id="workspace-page" class="page">
+
+                <div class="workspace-card">
+
+                    <div class="workspace-heading">
+                        <h2 id="workspace-title">Generate Code</h2>
+                        <p id="workspace-description">
+                            Describe what you want to create.
+                        </p>
+                    </div>
+
+
+                    <label for="language">
+                        Programming Language
+                    </label>
+
+                    <select id="language">
+                        <option value="C">C</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="C++">C++</option>
+                    </select>
+
+
+                    <label for="code-input" id="input-label">
+                        Describe your programming problem
+                    </label>
+
+                    <textarea
+                        id="code-input"
+                        placeholder="Example: Write a C program to calculate simple interest..."
+                    ></textarea>
+
+
+                    <button
+                        class="primary-btn"
+                        id="analyze-btn"
+                        onclick="analyzeCode()"
+                    >
+                        Generate with AI →
+                    </button>
+
+
+                    <!-- AI RESULTS -->
+                <div class="result-box">
+                    <div id="result-content">
+                    <h3>AI Results</h3>
+                    <p>Your results will appear here when you analyze your request.</p>
+                    </div>
+
+                    <div id="loading-indicator"
+                    class="loading-indicator"
+                    style="display: none;">
+                    <div class="spinner"></div>
+                    <p>KODZIVA is thinking...</p>
+                    </div>
+                </div>
+                        <!-- LOADING ANIMATION -->
+                        <div
+                            id="loading-indicator"
+                            class="loading-indicator"
+                            style="display: none;"
+                        >
+                            <div class="loader"></div>
+
+                            <h3>KODZIVA is thinking...</h3>
+
+                            <p>
+                                Analysing your request and preparing your code.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CODE HISTORY PAGE -->
+            <section id="history-page" class="page">
+
+                <div class="workspace-card">
+
+                    <h2>📚 Code History</h2>
+
+                    <p>
+                        View and manage your previously generated AI results.
+                    </p>
+
+                    <div id="history-list"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer>
+                KODZIVA © 2026 | Understand. Debug. Create. Grow.
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="/app.js"></script>
+
+</body>
+</html>

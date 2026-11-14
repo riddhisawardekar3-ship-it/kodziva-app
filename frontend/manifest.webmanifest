@@ -1,0 +1,11 @@
+{
+    "name": "KODZIVA-AI Coding Assistant",
+    "short_name": "KODZIVA",
+    "description": "Your AI-powered coding companion",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#080d1b",
+    "theme_color": "#080d1b"
+}

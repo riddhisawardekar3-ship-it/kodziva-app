@@ -1,0 +1,16 @@
+
+node_modules/
+.env
+.env.*
+!.env.example
+
+backend/node_modules/
+backend/.env
+
+android-backup/
+android/.gradle/
+android/local.properties
+android/build/
+android/app/build/
+
+*.log

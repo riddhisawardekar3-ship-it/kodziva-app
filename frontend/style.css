@@ -1,0 +1,1045 @@
+
+/* =================================
+   KODZIVA - PROFESSIONAL UI
+================================= */
+
+:root {
+    --bg: #080d19;
+    --sidebar: #0d1424;
+    --card: #111a2c;
+    --card-light: #16243b;
+    --border: #263752;
+    --blue: #397bff;
+    --blue-light: #75a4ff;
+    --text: #f5f7ff;
+    --muted: #9aa9c1;
+    --green: #35c98a;
+    --red: #ff647c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at top right, #122448 0%, transparent 40%),
+        var(--bg);
+    color: var(--text);
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+button, select, textarea {
+    font: inherit;
+}
+
+button {
+    transition: 0.2s ease;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    background: rgba(13, 20, 36, 0.96);
+    border-right: 1px solid var(--border);
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, #397bff, #765bff);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 5px 22px #397bff40;
+}
+
+.logo h2 {
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.logo small {
+    font-size: 9px;
+    color: #8290a8;
+}
+
+.nav-btn {
+    padding: 14px;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-align: left;
+    color: var(--muted);
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #192b4d;
+    border-color: #31558d;
+    color: white;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    color: #8493ac;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    flex: 1;
+    padding: 30px 45px;
+    min-width: 0;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    color: #6698ff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.topbar h2 {
+    font-size: 23px;
+}
+
+.profile {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #263e68, #397bff);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+/* PAGES */
+
+.page {
+    display: none;
+}
+
+.active-page {
+    display: block;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(120deg, #152b51, #101a30);
+    border: 1px solid #304b75;
+    border-radius: 20px;
+    padding: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 40px #00000020;
+}
+
+.tag {
+    color: #8db4ff;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: #70a2ff;
+}
+
+.hero p {
+    color: #b4c1d6;
+    max-width: 490px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.hero-symbol {
+    color: #5d91ff;
+    font-size: clamp(65px, 9vw, 110px);
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+/* BUTTONS */
+
+.primary-btn {
+    background: linear-gradient(135deg, #397bff, #5a65ff);
+    color: white;
+    padding: 14px 23px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 5px 18px #397bff30;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px #397bff55;
+}
+
+.primary-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* FEATURE GRID */
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-size: 22px;
+    margin-bottom: 9px;
+}
+
+.section-heading p {
+    color: #8998b0;
+    font-size: 14px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.feature-card {
+    background: linear-gradient(145deg, #131f34, #0f1829);
+    border: 1px solid var(--border);
+    padding: 24px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #578aff;
+    box-shadow: 0 12px 30px #00000035;
+}
+
+.feature-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.blue { background: #183e78; }
+.red { background: #592a3d; }
+.purple { background: #412b69; }
+.green { background: #194d43; }
+.orange { background: #654021; }
+.cyan { background: #164c61; }
+
+.feature-card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 43px;
+    margin-bottom: 17px;
+}
+
+.feature-card span {
+    color: var(--blue-light);
+    font-size: 13px;
+}
+
+.bottom-banner {
+    margin-top: 28px;
+    padding: 24px;
+    background: #101c31;
+    border-radius: 12px;
+    border: 1px solid #293c5b;
+}
+
+.bottom-banner p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* WORKSPACE */
+
+.workspace-card {
+    max-width: 900px;
+    background: linear-gradient(145deg, #111d32, #0e1728);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 17px;
+    box-shadow: 0 15px 40px #00000020;
+}
+
+.workspace-heading {
+    margin-bottom: 25px;
+}
+
+.workspace-heading h2 {
+    font-size: 24px;
+}
+
+.workspace-heading p {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+.workspace-card label {
+    display: block;
+    margin: 20px 0 10px;
+    font-size: 14px;
+}
+
+.workspace-card select,
+.workspace-card textarea {
+    width: 100%;
+    padding: 14px;
+    background: #080f1e;
+    color: white;
+    border: 1px solid #30405c;
+    border-radius: 9px;
+    outline: none;
+}
+
+.workspace-card textarea {
+    min-height: 180px;
+    resize: vertical;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.workspace-card select:focus,
+.workspace-card textarea:focus {
+    border-color: #578aff;
+    box-shadow: 0 0 0 3px #397bff20;
+}
+
+/* AI RESULTS */
+
+.result-box {
+    margin-top: 25px;
+    padding: 24px;
+    background: #0b1322;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    overflow-wrap: anywhere;
+}
+
+.result-box h3 {
+    margin-bottom: 12px;
+}
+
+.result-box p {
+    color: #b1bfd5;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+.result-box pre {
+    color: #c9dcff;
+    line-height: 1.7;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* INTERACTIVE VIVA */
+
+.viva-answer {
+    display: block;
+    width: 100%;
+    min-height: 140px;
+    margin: 20px 0;
+    padding: 16px;
+    background: #080f1e;
+    border: 1px solid #30405c;
+    border-radius: 12px;
+    color: white;
+    resize: vertical;
+    outline: none;
+    line-height: 1.7;
+}
+
+.viva-answer:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px #397bff20;
+}
+
+.viva-answer::placeholder {
+    color: #71819b;
+}
+
+.viva-feedback {
+    background: linear-gradient(145deg, #142440, #101a2d);
+    border: 1px solid #304b75;
+    border-radius: 13px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.viva-feedback h3 {
+    color: #80aaff;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.viva-feedback h4 {
+    color: #8db4ff;
+    margin-top: 18px;
+}
+
+.viva-feedback p {
+    color: #b8c6db;
+    line-height: 1.7;
+}
+
+.viva-feedback p:first-of-type {
+    margin-top: 10px;
+}
+
+/* FUTURE VIVA PROGRESS BAR */
+
+.viva-progress {
+    width: 100%;
+    height: 8px;
+    background: #263752;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0 22px;
+}
+
+.viva-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #397bff, #8a73ff);
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+/* FOOTER */
+
+footer {
+    color: #71819b;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 15px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 950px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 650px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .sidebar .nav-btn {
+        display: inline-block;
+        padding: 10px;
+        margin: 3px;
+        font-size: 12px;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .topbar h2 {
+        font-size: 19px;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero-symbol {
+        display: none;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workspace-card {
+        padding: 20px;
+    }
+
+    .result-box {
+        padding: 16px;
+    }
+
+    .viva-feedback {
+        padding: 16px;
+    }
+
+    .primary-btn {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .sidebar .nav-btn {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .main-content {
+        padding: 15px 10px;
+    }
+
+    .workspace-card {
+        padding: 15px;
+    }
+}
+
+
+/* =========================
+   KODZIVA CODE HISTORY
+========================= */
+
+#history-page {
+    width: 100%;
+    padding: 10px 0;
+}
+
+#history-page .workspace-card {
+    width: 100%;
+}
+
+#history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.history-card {
+    background: #111d35;
+    border: 1px solid #263b60;
+    border-radius: 14px;
+    padding: 22px;
+    transition: 0.25s ease;
+}
+
+.history-card:hover {
+    border-color: #477cff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.history-card h3 {
+    color: #ffffff;
+    font-size: 17px;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.history-card p {
+    color: #a8b8d2;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.history-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.history-actions button {
+    background: #20365d;
+    color: #ffffff;
+    border: 1px solid #385687;
+    border-radius: 8px;
+    padding: 9px 17px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.history-actions button:hover {
+    background: #376bff;
+    border-color: #376bff;
+}
+
+.history-actions button:last-child {
+    background: #402432;
+    border-color: #754052;
+}
+
+.history-actions button:last-child:hover {
+    background: #b83250;
+    border-color: #b83250;
+}
+
+.history-output {
+    margin-top: 18px;
+    padding: 18px;
+    background: #091326;
+    border: 1px solid #263b60;
+    border-radius: 10px;
+    color: #dce8ff;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    overflow-x: auto;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .history-card {
+        padding: 16px;
+    }
+
+    .history-actions button {
+        flex: 1;
+        padding: 10px;
+    }
+}
+
+/* KODZIVA PERSONAL DASHBOARD */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.stat-card {
+    background: linear-gradient(145deg, #142442, #101b32);
+    border: 1px solid #263b60;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: #477cff;
+    box-shadow: 0 8px 25px rgba(55, 107, 255, 0.15);
+}
+
+.stat-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.stat-card h3 {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.stat-card p {
+    color: #a9b8d3;
+    font-size: 14px;
+    margin: 8px 0 0;
+}
+
+.dashboard-activity {
+    background: #111d35;
+    border: 1px solid #263b60;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 25px 0;
+}
+
+.dashboard-activity h2 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.activity-item {
+    background: #172744;
+    border: 1px solid #263b60;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+.activity-item h4 {
+    color: #ffffff;
+    font-size: 15px;
+    margin: 0 0 8px;
+    overflow-wrap: anywhere;
+}
+
+.activity-item p {
+    color: #9eafca;
+    font-size: 13px;
+    margin: 0;
+}
+
+.activity-empty {
+    color: #9eafca;
+    padding: 15px 0;
+}
+
+@media (max-width: 650px) {
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-activity {
+        padding: 16px;
+    }
+}
+
+/* FIX KODZIVA DASHBOARD WIDTH */
+
+.app-container {
+    width: 100%;
+    min-width: 0;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+}
+
+#home-page {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-stats,
+.dashboard-activity {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#activity-list {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.activity-item {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* KODZIVA LEARNING PROGRESS TRACKER */
+
+.progress-tracker {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 25px;
+    padding: 25px;
+    background: #111d35;
+    border: 1px solid #263b60;
+    border-radius: 16px;
+}
+
+.progress-tracker > h2 {
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.weekly-progress {
+    background: #172744;
+    border: 1px solid #263b60;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.weekly-progress h3,
+.achievement-section h3 {
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+
+#weekly-chart {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+    align-items: end;
+    min-height: 130px;
+}
+
+.week-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.week-bar-container {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background: #101b32;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.week-bar {
+    width: 65%;
+    min-height: 4px;
+    background: linear-gradient(180deg, #477cff, #2452c7);
+    border-radius: 6px 6px 0 0;
+}
+
+.week-day span {
+    color: #a9b8d3;
+    font-size: 12px;
+}
+
+.learning-insights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.insight-card {
+    background: #172744;
+    border: 1px solid #263b60;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.insight-card h3 {
+    color: #a9b8d3;
+    font-size: 14px;
+}
+
+.insight-card p {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.achievement-section {
+    background: #172744;
+    border: 1px solid #263b60;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#achievement-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.achievement-badge {
+    background: #24385b;
+    border: 1px solid #477cff;
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .learning-insights {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-tracker {
+        padding: 16px;
+    }
+
+    #weekly-chart {
+        gap: 5px;
+    }
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.loader {
+    width: 45px;
+    height: 45px;
+    border: 4px solid rgba(70, 130, 255, 0.2);
+    border-top: 4px solid #4389ff;
+    border-radius: 50%;
+    animation: kodzivaSpin 0.8s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.loading-indicator h3 {
+    color: #4389ff;
+    margin-bottom: 8px;
+}
+
+.loading-indicator p {
+    color: #aab4cc;
+    font-size: 14px;
+}
+
+@keyframes kodzivaSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =====================================
+   KODZIVA - DESKTOP LAYOUT FIX
+===================================== */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-width: 320px;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    align-items: stretch;
+}
+
+.sidebar {
+    flex: 0 0 250px;
+    width: 250px;
+    min-width: 250px;
+}
+
+.main-content {
+    flex: 1 1 0%;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    min-width: 0;
+}
+
+.page.active-page {
+    display: block;
+}
+
+.workspace-card {
+    width: 100%;
+    max-width: 900px;
+    min-width: 0;
+}
+
+#result {
+    width: 100%;
+    min-width: 0;
+}
+
+#result-content,
+#loading-indicator {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 650px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .main-content {
+        width: 100%;
+        flex: none;
+    }
+}
