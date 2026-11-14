@@ -1,3 +1,4 @@
+const API_BASE_URL = "https://kodziva-backend.onrender.com";
 const pageTitles = {
     home: "Welcome to KODZIVA",
     generate: "Prompt to Code",
@@ -170,7 +171,7 @@ if (!resultContent || !loadingIndicator || !analyzeButton) {
     analyzeButton.textContent = "Processing...";
 
     try {
-        const response = await fetch("/api/generate", {
+        const response = await fetch(`${API_BASE_URL}/api/generate`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -309,7 +310,7 @@ async function startViva(code) {
     result.append(message);
 
     try {
-        const response = await fetch("/api/viva/start", {
+        const response = await fetch(`${API_BASE_URL}/api/viva/start`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -427,7 +428,7 @@ async function evaluateVivaAnswer(answer, submitButton) {
     }
 
     try {
-        const response = await fetch("/api/viva/evaluate", {
+        const response = await fetch(`${API_BASE_URL}/api/viva/evaluate`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
