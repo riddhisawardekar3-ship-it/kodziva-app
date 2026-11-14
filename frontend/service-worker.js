@@ -1,6 +1,5 @@
 
-const CACHE_NAME = 'kodziva-v1';
-
+const CACHE_NAME = 'kodziva-v2';
 const APP_FILES=[
     "/",
     "/index.html",
